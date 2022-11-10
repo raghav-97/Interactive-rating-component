@@ -3,6 +3,7 @@ let submitBtn = document.querySelector(".submit_btn");
 let ratingPage = document.getElementById("rating-page");
 let thankYouPage = document.getElementById("thank-you-page");
 let ratingText = document.getElementById("selected-rating");
+let psRating = document.getElementById("ps-rating");
 let selectedRating = "";
 
 for (let i = 0; i < ratingBtn.length; i++) {
@@ -16,7 +17,16 @@ for (let i = 0; i < ratingBtn.length; i++) {
 submitBtn.addEventListener("click", function() {
 
     if (selectedRating === "") {
-        alert("Please Select Rating");
+    
+        for (let i = 0; i < ratingBtn.length; i++) {
+            ratingBtn[i].classList.add("error");
+            psRating.classList.remove("d-none");
+
+            setInterval(() => {
+                ratingBtn[i].classList.remove("error");
+                psRating.classList.add("d-none");
+            }, 1000);
+        }
     }
 
     else {
