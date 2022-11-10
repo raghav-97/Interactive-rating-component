@@ -89,10 +89,6 @@ p {
     text-align: center;
 }
 
-.d-none {
-    display: none;
-}
-
 .thank-you-img {
     margin: 0.8rem auto 2rem;
 }
@@ -112,11 +108,25 @@ p {
     font-weight: 600;
 }
 
+.d-none {
+    display: none;
+}
+
+.error {
+    border: 2px solid red;
+    color: rgb(245, 7, 7);
+    box-shadow: 5px 5px 15px rgba(245, 3, 3, 0.942);
+}
+
+#ps-rating {
+    text-align: center;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
